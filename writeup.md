@@ -138,5 +138,7 @@ Here's an example result showing the heatmap from a series of frames of video, t
 
 #### 1. Briefly discuss any problems / issues you faced in your implementation of this project.  Where will your pipeline likely fail?  What could you do to make it more robust?
 
-Here I'll talk about the approach I took, what techniques I used, what worked and why, where the pipeline might fail and how I might improve it if I were going to pursue this project further.  
+I used spatial binning, histogram features and hog features using all three channel from YCrCb color space and also tried various combinations of spatial size, including the sliding window approach to get all the possible windows in a defined ystart/ystop region. On those windows I calcualted the bounding boxes using the classifier and then added heat maps to remove false positives and generate one bounding box for the same car/object.
+
+The classifier doesn't works well on the cars far in the image (smaller in size). I tried using the optimized hog sampling sliding window approach to tackle this problem but I didn't have any luck with that, although it might need some more parameter tweaking to solve these issues. Another way to improve would be increase the data size by using some data augementation techinques. 
 
