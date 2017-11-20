@@ -63,9 +63,13 @@ Using the default get_hog_feature lesson function, I explored various color spac
 Here is an example using the `YCrCb` color space and HOG parameters of `orientations=32`, `pixels_per_cell=(16, 16)` and `cells_per_block=(2, 2)`:
 
 For Car Image:
+
+
 ![alt text][image1]
 
 For NonCar Image:
+
+
 ![alt text][image2]
 
 #### 2. Explain how you settled on your final choice of HOG parameters.
